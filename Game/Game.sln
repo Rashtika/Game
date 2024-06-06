@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{2FB0E7BF-2D7E-48EB-85A1-48F4143E88AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.WebAPI", "Game\Game.WebAPI.csproj", "{2FB0E7BF-2D7E-48EB-85A1-48F4143E88AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Common", "Game.Common\Game.Common.csproj", "{E5A60A52-8881-4F07-931D-C5CBC029125D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Common", "Game.Common\Game.Common.csproj", "{E5A60A52-8881-4F07-931D-C5CBC029125D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Model", "Champion.Model\Game.Model.csproj", "{2B454E01-DC06-4A31-862B-7C50F2C5A86D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Model", "Champion.Model\Game.Model.csproj", "{2B454E01-DC06-4A31-862B-7C50F2C5A86D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Repository.Common", "Champion.Repository.Common\Game.Repository.Common.csproj", "{E74B5B59-696F-43D6-AC48-7B9C538FB7A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Repository.Common", "Champion.Repository.Common\Game.Repository.Common.csproj", "{E74B5B59-696F-43D6-AC48-7B9C538FB7A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Repository", "ChampionRepository\Game.Repository.csproj", "{1D03594E-C9CC-407B-B5E9-E38ABCA9E156}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Repository", "ChampionRepository\Game.Repository.csproj", "{1D03594E-C9CC-407B-B5E9-E38ABCA9E156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Service.Common", "Game.Service.Common\Game.Service.Common.csproj", "{10E237AC-6B4F-401A-8FCA-B8032018A4E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Service.Common", "Game.Service.Common\Game.Service.Common.csproj", "{10E237AC-6B4F-401A-8FCA-B8032018A4E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Service", "Game.Service\Game.Service.csproj", "{DEEA6E3D-AE65-4E9A-B579-72AE3D6AB6D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Service", "Game.Service\Game.Service.csproj", "{DEEA6E3D-AE65-4E9A-B579-72AE3D6AB6D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Champion.Model\Game.Model.csproj" />
+    <ProjectReference Include="..\Game.Service\Game.Service.csproj" />
   </ItemGroup>
 
 </Project>

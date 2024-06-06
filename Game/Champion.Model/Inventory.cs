@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Champion.Model
+namespace Game.Model
 {
-    internal class Inventory
+    public class Inventory
     {
+        public Guid Id { get; set; }
+        public bool IsActive { get; set; }
+        public DateTime DateCreated { get; set; }
+        public int CreatedByUserId { get; set; }
+        public int UpdatedByUserId { get; set; }
+        public List<Item> Items { get; set; }
     }
 }

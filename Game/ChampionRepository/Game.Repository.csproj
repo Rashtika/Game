@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Champion.Model\Game.Model.csproj" />
+    <ProjectReference Include="..\Champion.Repository.Common\Game.Repository.Common.csproj" />
+    <ProjectReference Include="..\Game.Common\Game.Common.csproj" />
+  </ItemGroup>
+
 </Project>

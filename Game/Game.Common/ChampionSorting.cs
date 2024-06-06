@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Game.Common
 {
-    internal class ChampionSorting
+    public class ChampionSorting
     {
+        public string SortBy { get; set; } = "Name";
+        public string SortOrder { get; set; } = "asc";
     }
 }

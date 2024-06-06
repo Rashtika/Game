@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Game.Common
 {
-    internal class ChampionFiltering
+    public class ChampionFiltering
     {
+        public Guid? NameId { get; set; }
+        public int? Age { get; set; }
+        public string? Position { get; set; }
+        public Guid? InventoryId { get; set; }
     }
 }
