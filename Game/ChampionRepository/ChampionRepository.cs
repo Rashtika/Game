@@ -28,10 +28,10 @@ namespace Game.Repository
 
         public async Task<IEnumerable<Champion>> GetAll()
         {
-            var players = new List<Champion>();
+            var champions = new List<Champion>();
 
             await using var connection = new NpgsqlConnection(connectionString);
-            var cmdText = "SELECT * FROM \"Player\";";
+            var cmdText = "SELECT * FROM \"Champion\";";
 
             await using var command = new NpgsqlCommand(cmdText, connection);
             await connection.OpenAsync();
@@ -39,7 +39,7 @@ namespace Game.Repository
 
             while (await reader.ReadAsync())
             {
-                var player = new Champion
+                var champion = new Champion
                 {
                     Id = reader.GetGuid(reader.GetOrdinal("Id")),
                     Name = reader.GetString(reader.GetOrdinal("Name")),
@@ -49,10 +49,10 @@ namespace Game.Repository
                     CreatedByUserId = reader.GetInt32(reader.GetOrdinal("CreatedByUserId")),
                     UpdatedByUserId = reader.GetInt32(reader.GetOrdinal("UpdatedByUserId"))
                 };
-                players.Add(player);
+                champions.Add(champion);
             }
 
-            return players;
+            return champions;
         }
 
         public async Task<Champion> GetChampion(Guid id)
