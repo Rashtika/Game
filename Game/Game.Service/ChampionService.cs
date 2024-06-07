@@ -30,6 +30,11 @@ namespace Game.Service
             return await championRepository.GetChampion(id);
         }
 
+        public async Task UpdateChampion(Champion champion)
+        {
+            await championRepository.UpdateChampion(champion);
+        }
+
         public async Task<IEnumerable<Champion>> GetFilteredPlayers(ChampionFiltering filtering, ChampionSorting sorting, ChampionPaging paging)
         {
             throw new NotImplementedException();

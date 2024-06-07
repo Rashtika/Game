@@ -11,7 +11,7 @@ namespace Game.Service.Common
         Task<IEnumerable<Champion>> GetAll();
         Task<Champion> GetChampion(Guid id);
         Task<IEnumerable<Champion>> GetFilteredPlayers(ChampionFiltering filtering, ChampionSorting sorting, ChampionPaging paging);
-        //Task UpdatePlayer(Champion champion);
+        Task UpdateChampion(Champion champion);
         Task DeleteChampion(Guid id);
 
     }

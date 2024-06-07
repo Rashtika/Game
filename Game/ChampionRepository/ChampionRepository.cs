@@ -26,6 +26,25 @@ namespace Game.Repository
             await command.ExecuteNonQueryAsync();
         }
 
+        public async Task UpdateChampion(Champion champion)
+        {
+            await using var connection = new NpgsqlConnection(connectionString);
+            var cmdText = "UPDATE \"Champion\" SET \"Name\" = @Name, \"InventoryId\" = @InventoryId, \"Inventory\" = @Inventory, \"IsActive\" = @IsActive, \"DateCreated\" = @DateCreated, \"CreatedByUserId\" = @CreatedByUserId, \"UpdatedByUserId\" = @UpdatedByUserId WHERE \"Id\" = @Id;";
+            await connection.OpenAsync();
+            await using var command = new NpgsqlCommand(cmdText, connection);
+
+            command.Parameters.AddWithValue("@Id", champion.Id);
+            command.Parameters.AddWithValue("@Name", champion.Name);
+            command.Parameters.AddWithValue("@Inventory", champion.Inventory);
+            command.Parameters["@InventoryId"].NpgsqlDbType = NpgsqlTypes.NpgsqlDbType.Uuid;
+            command.Parameters.AddWithValue("@IsActive", champion.IsActive);
+            command.Parameters.AddWithValue("@DateCreated", champion.DateCreated);
+            command.Parameters.AddWithValue("@CreatedByUserId", champion.CreatedByUserId);
+            command.Parameters.AddWithValue("@UpdatedByUserId", champion.UpdatedByUserId);
+
+            await command.ExecuteNonQueryAsync();
+        }
+
         public async Task<IEnumerable<Champion>> GetAll()
         {
             var champions = new List<Champion>();
