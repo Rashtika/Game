@@ -14,7 +14,7 @@ namespace Game.Repository.Common
         Task<IEnumerable<Champion>> GetAll();
         Task<Champion> GetChampion(Guid id);
         Task<IEnumerable<Champion>> GetFilteredChampion(ChampionFiltering filtering, ChampionSorting sorting, ChampionPaging paging);
-        //Task UpdateChampion(Champion champion);
+        Task UpdateChampion(Champion champion);
         Task DeleteChampion(Guid id);
 
     }
